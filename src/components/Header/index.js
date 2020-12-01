@@ -1,10 +1,13 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <img alt="logo" src="/logo.svg" />
+      <Link path="/">
+        <img alt="logo" src="/logo.svg" />
+      </Link>
     </div>
   );
 };

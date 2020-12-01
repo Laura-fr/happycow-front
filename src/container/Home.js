@@ -1,7 +1,9 @@
 import React from "react";
-import restaurantsList from "../assets/restaurants.json";
-import headerpic from "../assets/homepage.webp";
 
+import headerpic from "../assets/homepage.webp";
+import VeganFood from "../components/VeganFood/index";
+import VeganStore from "../components/VeganStore";
+import VeganCosmetic from "../components/VeganCosmetic";
 const Home = () => {
   return (
     <div>
@@ -9,22 +11,17 @@ const Home = () => {
         <h1>Find Vegan Restaurants Nearby</h1>
         <img alt={headerpic} src={headerpic} />
       </div>
-      <div className="home">
-        {restaurantsList.map((data, index) => {
-          return (
-            <div>
-              {data.category === 0 && (
-                <div className="restaurants">
-                  <img alt={data.thumbnail} src={data.thumbnail} />
-                  <h2>{data.name}</h2>
-                  <p>Paris</p>
-                  <p>{data.rating}</p>
-                  <span>{data.description}</span>
-                </div>
-              )}
-            </div>
-          );
-        })}
+      <div className="homecontainer">
+        <h2>Vegan Food Near Me</h2>
+        <div>
+          <VeganFood />
+        </div>
+        <h2>Vegan Shop Near Me</h2>
+
+        <VeganStore />
+
+        <h2>Vegan Cosmetic Near Me</h2>
+        <VeganCosmetic />
       </div>
     </div>
   );
