@@ -1,26 +1,50 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+//Import components
+
+import Search from "../components/Search";
 
 import headerpic from "../assets/homepage.webp";
-import VeganFood from "../components/VeganFood/index";
+import VeganFood from "../components/VeganFood";
 import VeganStore from "../components/VeganStore";
 import VeganCosmetic from "../components/VeganCosmetic";
+
 const Home = () => {
   return (
     <div>
       <div className="hometop">
-        <h1>Find Vegan Restaurants Nearby</h1>
         <img alt={headerpic} src={headerpic} />
+
+        <div>
+          <Search />
+        </div>
       </div>
       <div className="homecontainer">
-        <h2>Vegan Food Near Me</h2>
+        <div className="containertitles">
+          <h2>Vegan Food Near Me</h2>
+          <Link to="/allfood">
+            <button>View all </button>
+          </Link>
+        </div>
         <div>
           <VeganFood />
         </div>
-        <h2>Vegan Shop Near Me</h2>
+        <div className="containertitles">
+          <h2>Vegan Shop Near Me</h2>
+          <Link to="/allshop">
+            <button>View all </button>
+          </Link>
+        </div>
 
         <VeganStore />
 
-        <h2>Vegan Cosmetic Near Me</h2>
+        <div className="containertitles">
+          <h2>Vegan Cosmetic Near Me</h2>
+          <Link to="/allcosmetic">
+            <button>View all </button>
+          </Link>
+        </div>
         <VeganCosmetic />
       </div>
     </div>

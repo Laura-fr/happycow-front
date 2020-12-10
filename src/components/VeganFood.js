@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import restaurantsList from "../assets/restaurants.json";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const VeganCosmetic = () => {
+const VeganFood = () => {
   return (
     <div className="menue">
       {restaurantsList.map((data, index) => {
-        if (index <= 150) {
+        if (index <= 10) {
           return (
             <div className="">
-              {data.category === 99 && (
+              {data.category === 0 && (
                 <div className="restaurants">
                   <Link to={`/resume/${data.placeId}`}>
                     <img alt={data.thumbnail} src={data.thumbnail} />
@@ -51,4 +51,4 @@ const VeganCosmetic = () => {
   );
 };
 
-export default VeganCosmetic;
+export default VeganFood;
