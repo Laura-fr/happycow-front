@@ -93,11 +93,11 @@ code {
   width: 950px;
   background-color: white;
   position: fixed;
-  top: 8%;
+  top: 10%;
   border-radius: 25px;
 
-  left: 25%;
-  /* transform: translate(-50%, 50%); */
+  left: 50%;
+  transform: translate(-50%, 0%);
   z-index: 999;
 }
 
@@ -125,7 +125,8 @@ code {
   align-items: center;
   position: absolute;
   top: 150px;
-  left: 510px;
+  left: 20%;
+  right: 20%;
   z-index: 0;
 }
 
@@ -404,8 +405,8 @@ code {
 }
 
 .map {
-  width: 550px;
-  height: 620px;
+  width: 480px;
+  height: 390px;
 }
 
 /* FUCKING MARKER !!! */
@@ -427,7 +428,7 @@ code {
 .footer {
   margin-top: 150px;
   background-color: #7c4ec4;
-  height: 200px;
+  height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
