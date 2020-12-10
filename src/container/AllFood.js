@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const AllFood = () => {
   // const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsperPage] = useState(50);
+  const [postsPerPage] = useState(50);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
