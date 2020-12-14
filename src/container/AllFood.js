@@ -20,7 +20,7 @@ const AllFood = () => {
       <div className="all">
         {currentPosts.map((data, index) => {
           return (
-            <div>
+            <div key={index}>
               {data.category === 0 && (
                 <div className="card">
                   <Link to={`/resume/${data.placeId}`}>

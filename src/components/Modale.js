@@ -1,5 +1,6 @@
 import React from "react";
 import modalepic from "../assets/login-social.jpg";
+import { Link } from "react-router-dom";
 
 const Modale = ({ revele, cache }) => {
   return revele ? (
@@ -22,7 +23,14 @@ const Modale = ({ revele, cache }) => {
               <input type="password" />
               <input className="submit" type="button" value="Login" />
 
-              <input className="submit" type="button" value="Register" />
+              <Link to="/register">
+                <input
+                  className="submit"
+                  type="button"
+                  value="Register"
+                  onClick={cache}
+                />
+              </Link>
             </div>
           </div>
         </div>

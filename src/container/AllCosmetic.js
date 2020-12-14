@@ -9,7 +9,7 @@ const AllCosmetic = () => {
       <div className="all">
         {restaurantsList.map((data, index) => {
           return (
-            <div className="">
+            <div key={index} className="">
               {data.category === 99 && (
                 <div className="card">
                   <Link to={`/resume/${data.placeId}`}>

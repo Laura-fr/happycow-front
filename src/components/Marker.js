@@ -1,7 +1,11 @@
 import React from "react";
 
 const Marker = () => {
-  return <div className="marker">🐮</div>;
+  return (
+    <div role="img" className="marker">
+      🐮
+    </div>
+  );
 };
 
 export default Marker;

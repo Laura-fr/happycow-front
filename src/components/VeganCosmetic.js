@@ -9,7 +9,7 @@ const VeganCosmetic = () => {
       {restaurantsList.map((data, index) => {
         if (index <= 150) {
           return (
-            <div className="">
+            <div key={index} className="">
               {data.category === 99 && (
                 <div className="restaurants">
                   <Link to={`/resume/${data.placeId}`}>

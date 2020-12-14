@@ -16,8 +16,9 @@ const Resume = () => {
       }
     }
   };
+
   const foundId = getId();
-  console.log(foundId);
+  console.log("ceci est mon cosole log =>", Number(restaurantsList.placeId));
 
   return (
     <div>
@@ -51,7 +52,7 @@ const Resume = () => {
                     style={{ color: "#7c4ec4", fontSize: 25, marginRight: 10 }}
                     icon="map-marker-alt"
                   />
-                  <div classname="acard">
+                  <div className="acard">
                     <p> {foundId.address}</p>
                   </div>
                 </div>
@@ -65,7 +66,7 @@ const Resume = () => {
             </div>
             <div className="caroussel">
               {foundId.pictures.map((data, index) => {
-                return <img src={data} alt={data} />;
+                return <img src={data} alt={data} key={index} />;
               })}
             </div>
           </div>

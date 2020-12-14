@@ -9,6 +9,7 @@ import Result from "./container/Result";
 import AllFood from "./container/AllFood";
 import AllShop from "./container/AllShop";
 import AllCosmetic from "./container/AllCosmetic";
+import Register from "./container/Register";
 
 //IMPORT COMPONENTS
 import Header from "./components/Header";
@@ -48,6 +49,10 @@ function App() {
         <Route path="/allcosmetic">
           <AllCosmetic />
         </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+
         <Route path="/result/:search">
           <Result />
         </Route>

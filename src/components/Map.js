@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import data from "../assets/restaurants.json";
-import Marker from "./Marker";
+// import Marker from "./Marker";
 
 // const AnyReactComponent = ({ text, className }) => (
 //   <div>
 //     {text}
-//     {className}
+//
 //   </div>
 // );
 // lat: restaurantsList.location && restaurantsList.location.lat,
@@ -15,15 +15,19 @@ import Marker from "./Marker";
 // lat: 48.862881,
 // lng: 2.351543,
 
+// lat: Number(data.location && data.location.lat),
+//       lng: Number(data.location && data.location.lng),
+
 const renderMarkers = (map, maps) => {
   let marker = new maps.Marker({
     position: {
-      lat: data.location && data.location.lat,
-      lng: data.location && data.location.lng,
+      lat: Number(data.location && data.location.lat),
+      lng: Number(data.location && data.location.lng),
     },
     map,
     title: "Hello World!",
   });
+
   return marker;
 };
 class SimpleMap extends Component {
@@ -41,12 +45,12 @@ class SimpleMap extends Component {
       <div className="map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyCNTSvGAIuBOEuGM7KMSWJH4wGvH0LgXNA" }}
-          defaultCenter={{ lat: 48.8534, lng: 2.3488 }}
+          defaultCenter={{ lat: 48.862881, lng: 2.351543 }}
           defaultZoom={13}
           yesIWantToUseGoogleMapApiInternals={true}
           onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
         >
-          <Marker lat={48.862881} lng={2.351543} />
+          {/* <Marker lat={48.862881} lng={2.351543} /> */}
         </GoogleMapReact>
       </div>
     );
