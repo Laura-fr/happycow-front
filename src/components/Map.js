@@ -18,6 +18,8 @@ import data from "../assets/restaurants.json";
 // lat: Number(data.location && data.location.lat),
 //       lng: Number(data.location && data.location.lng),
 
+const apiKey = process.env.REACT_APP_GOOGLE_KEY;
+
 const renderMarkers = (map, maps) => {
   let marker = new maps.Marker({
     position: {
@@ -44,7 +46,7 @@ class SimpleMap extends Component {
       // Important! Always set the container height explicitly
       <div className="map">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyCNTSvGAIuBOEuGM7KMSWJH4wGvH0LgXNA" }}
+          bootstrapURLKeys={{ key: apiKey }}
           defaultCenter={{ lat: 48.862881, lng: 2.351543 }}
           defaultZoom={13}
           yesIWantToUseGoogleMapApiInternals={true}

@@ -15,6 +15,8 @@ import Register from "./container/Register";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+// IMPORT ICONES
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faEnvelope,
